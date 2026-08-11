@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Resultado</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='resultado.css') }}">
+</head>
+
+<body>
+
+    <div class="resultado">
+
+        <h1>Resultado do Quiz</h1>
+
+        <h2>✅ Acertos: {{ pontos }}</h2>
+
+        <h2>❌ Erros: {{ erros }}</h2>
+
+        <p>{{ mensagem }}</p>
+
+
+        {% if erros_lista %}
+
+            <h2>❌ Questões que você errou:</h2>
+
+            {% for erro in erros_lista %}
+
+                <div class="erro">
+
+                    <h3>❌ Pergunta {{ erro.numero }}</h3>
+
+                    <p>
+                        Sua resposta:
+                        <strong>{{ erro.resposta_usuario }}</strong>
+                    </p>
+
+                    <p>
+                        Resposta correta:
+                        <strong>{{ erro.resposta_correta }}</strong>
+                    </p>
+
+                </div>
+
+            {% endfor %}
+
+        {% else %}
+
+            <h2>🎉 Você acertou todas as questões!</h2>
+
+        {% endif %}
+
+
+        <a href="/">🔄 Refazer Quiz</a>
+
+    </div>
+
+</body>
+
+</html>

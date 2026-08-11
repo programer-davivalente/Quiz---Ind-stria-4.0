@@ -1,0 +1,168 @@
+<!doctype html>
+
+  <html lang="pt-br"></html>
+
+  <head>
+    <title>Quiz de Robotica</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"/>
+    <meta name="description" content="Quiz de robótica Indústria 4.0"/>
+    <meta name="author" content="Davi Valente de Oliveira"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+
+  <body>
+    <header>
+      <section>
+        <h1 class="titulo-principal">Indústria 4.0</h1>
+        <p>
+          Teste seu conhecimento sobre o que você acabou de aprender sobre a indústria 4.0 e veja quantos pontos você consegue fazer!
+        </p>
+      </section>
+    </header>
+    <main>
+      <!--Introduçao-->
+        <section>
+          <h1 class="sobre-este-quiz">Sobre este Quiz</h1>
+          <p>
+            Neste Quiz você responderá a 8 perguntas sobre a indústria 4.0,
+            cada questão contendo 4 alternativas, então boa sorte.
+          </p>
+        </section>
+      <!--Pergunta1-->
+      <form action="/verificar" method="POST">
+        <section id="per1">
+          <h2>
+            Pergunta 1: O que melhor define o conceito principal da Indústria 4.0?</h2>
+            <img src="{{ url_for('static', filename='img/GARRA.jpeg') }}" alt="Uma garra mecânica sendo operada por um homem"> <br> <br>
+              <input type="radio" value="O uso exclusivo de energia renovável nas fábricas" id="pla" name="PERGUNTA1" />
+              <label for="pla"> O uso exclusivo de energia renovável nas fábricas. </label> <br />
+              <input type="radio" value="A conexão digital entre máquinas e sistemas" id="pla1" name="PERGUNTA1" />
+              <label for="pla1"> A conexão digital entre máquinas e sistemas. </label> <br />
+              <input type="radio" value="A substituição total de trabalhadores por robôs" id="pla2" name="PERGUNTA1" />
+              <label for="pla2"> A substituição total de trabalhadores por robôs. </label> <br />
+              <input type="radio" value="O retorno à produção artesanal" id="pla3" name="PERGUNTA1" />
+              <label for="pla3"> O retorno à produção artesanal. </label> <br />
+              <center><a href="#per2">➡️Próxima Pergunta</a></center>
+        </section>
+      <!--Pergunta2-->
+        <section id="per2">
+          <h2>
+            Pergunta 2: Na Indústria 4.0, o que significa a sigla IoT (Internet of Things / Internet das Coisas)?
+          </h2>
+          <img src="{{ url_for('static', filename='img/IoT.jpeg') }}" alt="IoT"> <br> <br>
+            <input type="radio" value="Internet organizada para trabalhadores" id="bloco1" name="PERGUNTA2" />
+            <label for="bloco1"> Internet organizada para trabalhadores. </label> <br />
+            <input type="radio" value="Protocolo antigo de navegação web" id="bloco2" name="PERGUNTA2" />
+            <label for="bloco2"> Protocolo antigo de navegação web. </label> <br />
+            <input type="radio" value="Conexão de objetos físicos à internet" id="bloco3" name="PERGUNTA2" />
+            <label for="bloco3"> Conexão de objetos físicos à internet. </label> <br />
+            <input type="radio" value="Redes sociais corporativas" id="bloco5" name="PERGUNTA2" />
+            <label for="bloco5"> Redes sociais corporativas. </label>
+            <center><a href="#per3">➡️Próxima Pergunta</a></center>
+        </section>
+      <!--Pergunta3-->
+        <section id="per3">
+          <h2>
+            Pergunta 3: Qual é a função principal do Big Data em uma fábrica inteligente?
+          </h2>
+          <img src="{{ url_for('static', filename='img/DATA.jpeg') }}" alt="Um computador com BIG DATA"> <br> <br>
+            <input type="radio" value="Substituir os cabos de energia" id="mob1" name="PERGUNTA3" />
+            <label for="mob1"> Substituir os cabos de energia. </label> <br />
+            <input type="radio" value="Criar propagandas digitais para a empresa" id="mob2" name="PERGUNTA3" />
+            <label for="mob2"> Criar propagandas digitais para a empresa. </label> <br />
+            <input type="radio" value="Analisar grandes volumes de informações" id="mob3" name="PERGUNTA3" />
+            <label for="mob3"> Analisar grandes volumes de informações. </label> <br />
+            <input type="radio" value="Reduzir o tamanho dos computadores" id="mob4" name="PERGUNTA3" />
+            <label for="mob4"> Reduzir o tamanho dos computadores. </label> <br />
+            <center><a href="#per4">➡️Próxima Pergunta</a></center>
+        </section>
+      <!--Pergunta4-->
+        <section id="per4">
+          <h2>
+            Pergunta 4: A tecnologia de Computação em Nuvem (Cloud Computing) serve para:
+          </h2>
+          <img src="{{ url_for('static', filename='img/NUVEM.jpeg') }}" alt="Dados na nuvem"> <br> <br>
+            <input type="radio" value="Resfriar o ambiente físico dos servidores" id="bolo1" name="PERGUNTA4" />
+            <label for="bolo1"> Resfriar o ambiente físico dos servidores. </label> <br />
+            <input type="radio" value="Armazenar e acessar dados pela internet" id="bolo2" name="PERGUNTA4" />
+            <label for="bolo2"> Armazenar e acessar dados pela internet. </label> <br />
+            <input type="radio" value="Imprimir documentos em papel" id="bolo3" name="PERGUNTA4" />
+            <label for="bolo3"> Imprimir documentos em papel. </label> <br />
+            <input type="radio" value="Controlar o clima dentro do galpão industrial" id="bolo4" name="PERGUNTA4" />
+            <label for="bolo4"> Controlar o clima dentro do galpão industrial. </label> <br />
+            <center><a href="#per5">➡️Próxima Pergunta</a></center>
+        </section>
+      <!--Pergunta5-->
+        <section id="per5">
+          <h2>Pergunta 5: A impressão 3D é um exemplo de qual processo industrial?</h2>
+            <img src="{{ url_for('static', filename='img/3D.jpeg') }}" alt="Máquina de impressão 3D"> <br> <br>
+            
+            <input type="radio" value="Fundição Usinagem por Subtração" id="bolo1" name="PERGUNTA5" />
+            <label for="bolo1"> Fundição Usinagem por Subtração. </label> <br />
+            <input type="radio" value="Manufatura Aditiva" id="bolo2" name="PERGUNTA5" />
+            <label for="bolo2"> Manufatura Aditiva. </label> <br />
+            <input type="radio" value="Manufatura Masterativa" id="bolo3" name="PERGUNTA5" />
+            <label for="bolo3"> Manufatura Masterativa. </label> <br />
+            <input type="radio" value="Fundição Tra[]" id="bolo4" name="PERGUNTA5" />
+            <label for="bolo4"> Fundição Tradicional. </label> <br />
+            <center><a href="#per6">➡️Próxima Pergunta</a></center>
+        </section>
+      <!--Pergunta6-->
+        <section id="per6">
+          <h2>
+            Pergunta 6: O que caracteriza um robô colaborativo (Cobot)? <br>
+          </h2>
+            <img src="{{ url_for('static', filename='img/GARRAO.jpg') }}" alt="Um Cobot grande"> <br>
+            <input type="radio" value="Ele substitui a gerência da empresa" id="esqueleto" name="PERGUNTA6" />
+            <label for="esqueleto"> Ele substitui a gerência da empresa. </label> <br>
+            <input type="radio" value="Ele trabalha em parceria com seres humanos" id="wither" name="PERGUNTA6" />
+            <label for="wither"> Ele trabalha em parceria com seres humanos. </label> <br>
+            <input type="radio" value="Ele só funciona com comandos de voz em inglês" id="bruxa" name="PERGUNTA6" />
+            <label for="bruxa"> Ele só funciona com comandos de voz em inglês. </label> <br>
+            <input type="radio" value="Ele não precisa de energia para funcionar" id="slime" name="PERGUNTA6" />
+            <label for="slime"> Ele não precisa de energia para funcionar. </label> <br>
+            <center><a href="#per7">➡️Próxima Pergunta</a></center>
+        </section>
+      <!--Pergunta7-->
+        <section id="per7">
+          <h2>
+            Pergunta 7: Por que a Cibersegurança é importante na Indústria 4.0? <br>
+          </h2>
+            <img src="{{ url_for('static', filename='img/LOCK.jpeg') }}" alt="Cadeado de Cibersegurança"> <br>
+            <input type="radio" value="Para proteger a fábrica de ataques de hackers" id="mob1" name="PERGUNTA7" />
+            <label for="mob1"> Para proteger a fábrica de ataques de hackers. </label> <br />
+            <input type="radio" value="Para impedir que as máquinas gastem muita energia" id="mob2" name="PERGUNTA7" />
+            <label for="mob2"> Para impedir que as máquinas gastem muita energia. </label> <br />
+            <input type="radio" value="Para organizar os arquivos físicos do escritório" id="mob3" name="PERGUNTA7" />
+            <label for="mob3"> Para organizar os arquivos físicos do escritório. </label> <br />
+            <input type="radio" value="Para rastrear o horário de chegada dos funcionários" id="mob4" name="PERGUNTA7" />
+            <label for="mob4"> Para rastrear o horário de chegada dos funcionários. </label> <br />
+            <center><a href="#per8">➡️Próxima Pergunta</a></center>
+        </section>
+      <!--Pergunta8-->
+        <section id="per8">
+          <h2>Pergunta 8: Qual o principal objetivo de uma Fábrica Inteligente (Smart Factory)?</h2> <br>
+          <img src="{{ url_for('static', filename='img/CEO.jpeg') }}" alt="Funcionários da fábrica discutindo a sustentabilidade da própria"> <br>
+          <input type="radio" value="Aumentar a eficiência e reduzir desperdícios" id="mob1" name="PERGUNTA8" />
+          <label for="mob1"> Aumentar a eficiência e reduzir desperdícios. </label> <br />
+          <input type="radio" value="Eliminar completamente a produção de dados" id="mob2" name="PERGUNTA8" />
+          <label for="mob2"> Eliminar completamente a produção de dados. </label> <br />
+          <input type="radio" value="Depender apenas de ferramentas automáticas" id="mob3" name="PERGUNTA8" />
+          <label for="mob3"> Depender apenas de ferramentas automáticas. </label> <br />
+          <input type="radio" value="Vender produtos automaticamente" id="mob4" name="PERGUNTA8" />
+          <label for="mob4"> Vender produtos automaticamente. </label> <br />
+          <center><a href="#fim">➡️Ir Para o Fim</a></center>
+        </section>
+        <section id="fim">
+          <center><a href="#per1">⬆️Revisar Quiz⬆️</a></center>
+            <h2 class="BOTAO">Conferir Respostas</h2>
+            <center><button type="submit">ENVIAR RESPOSTAS</button></center>
+        </section>
+      </form>
+      <!---Fim do Quiz--->
+    </main>
+    <footer>
+      <p>© 2026 Quiz de Industria 4.0 - Todos os direitos reservados.</p>
+    </footer>
+  </body>
+</html>
