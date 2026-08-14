@@ -1,66 +1,191 @@
-body{
-    background:#1c2430;
-    color:white;
-    font-family:Arial, sans-serif;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    height:100vh;
-}
-.resultado{
-
-    background:white;
-    color:black;
-
-    padding:40px;
-
-    width:600px;
-
-    border-radius:15px;
-
-    text-align:center;
-
-    box-shadow:0px 0px 20px black;
+@font-face {
+    font-family: 'Rafaela';
+    src: url("img/Rafaela-Bold.ttf") format("truetype");
+    font-weight: bold;
 }
 
-h1{
-
-    color:#0066ff;
-
-    font-size:40px;
+/* Evita que padding e bordas façam os elementos ultrapassarem a tela */
+* {
+    box-sizing: border-box;
 }
 
-h2{
-
-    margin:20px;
+html {
+    scroll-behavior: smooth;
+    width: 100%;
+    overflow-x: hidden;
 }
 
-p{
- font-size:25px;
-
+body {
+    background-image: url("img/IA_FUNDO.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    color: rgb(0, 0, 0);
+    font-size: 1.2em;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
 }
 
-a{
-    display:inline-block;
-
-    margin-top:20px;
-
-    text-decoration:none;
-
-    color:white;
-
-    background:#008000;
-
-    padding:15px 30px;
-
-    border-radius:10px;
-
-    font-size:20px;
+/* Título principal */
+h1.titulo-principal {
+    color: rgb(25, 105, 190);
+    text-align: center;
+    font-size: clamp(2.5rem, 6vw, 5.8rem);
+    text-shadow: 6px 6px 10px rgb(0, 0, 0), 0 1px 0 #fff;
+    border: 5px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    margin: 5px auto;
+    padding: 4px;
+    width: 90%;
+    max-width: 1000px;
+    font-family: 'Rafaela', sans-serif;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
 }
 
-a:hover{
+/* Subtítulos */
+h1.sobre-este-quiz {
+    color: black;
+    text-align: center;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-family: sans-serif;
+}
 
-    background:#00aa00;
+h2.BOTAO {
+    color: black;
+    text-align: center;
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    font-family: sans-serif;
+}
+
+/* Perguntas */
+h2 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+/* Parágrafos */
+p {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    text-align: center;
+}
+
+/* Botão */
+button {
+    background-color: rgb(21, 61, 12);
+    color: white;
+    font-family: sans-serif;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    border: none;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 90%;
+    max-width: 350px;
+}
+
+button:hover {
+    background-color: rgb(35, 95, 20);
+}
+
+/* Seções */
+section,
+footer {
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: rgba(194, 213, 227, 0.9);
+}
+
+a {
+    color: blue;
+    text-decoration: none;
+    font-size: clamp(1rem, 2.5vw, 2rem);
+    line-height: 2;
+}
+
+a:hover {
+    background-color: rgba(194, 213, 227, 0.9);
+    color: black;
+    font-weight: bold;
+    transition: 0.5s;
+    border: solid 2px black;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+input[type="radio"] {
+    transform: scale(1.5);
+    accent-color: red;
+}
+
+label {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    line-height: 1.8;
+}
+
+/* Imagens */
+img {
+    display: block;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 500px;
+    height: auto;
+    border: 4px solid black;
+    border-radius: 10px;
+    box-shadow: 6px 6px 10px black;
+}
+
+/* Celulares */
+@media (max-width: 768px) {
+
+    body {
+        font-size: 1rem;
+    }
+
+    h1.titulo-principal {
+        width: 95%;
+        padding: 15px;
+        font-size: clamp(2rem, 10vw, 4rem);
+    }
+
+    section,
+    footer {
+        width: 95%;
+        padding: 15px;
+        margin: 15px auto;
+    }
+
+    h2 {
+        font-size: clamp(1.4rem, 6vw, 2rem);
+    }
+
+    p {
+        font-size: 1.1rem;
+    }
+
+    img {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    input[type="radio"] {
+        transform: scale(1.2);
+    }
+
+    label {
+        display: inline-block;
+        margin-bottom: 12px;
+        font-size: 1rem;
+    }
+
+    a {
+        font-size: 1.2rem;
+    }
 }
