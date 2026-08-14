@@ -4,8 +4,7 @@
     font-weight: bold;
 }
 
-/* Evita que padding e bordas façam os elementos ultrapassarem a tela */
-* {
+{
     box-sizing: border-box;
 }
 
@@ -16,7 +15,7 @@ html {
 }
 
 body {
-    background-image: url("img/IA_FUNDO.jpeg");
+    background-image: url("img/IA_FUNDO.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
